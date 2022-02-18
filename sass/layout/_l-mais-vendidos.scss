@@ -1,0 +1,52 @@
+$layout-name: "l-mais-vendidos";
+
+.#{$layout-name}{
+ padding: 4em 0;
+
+    .row{
+        margin: 0;
+
+        .modal-title{
+            color: var(--color-webfatorial-body);
+        }
+
+        .card{
+            text-align: center;
+            border-radius: 0;
+            background-color: var(--color-webfatorial-body);
+
+            .card-category{
+                font-size: 0.8em;
+                color: gray;
+            }
+            
+            img{
+                width: 140px;
+                margin: 2em auto;
+            }
+
+            #img-simples{
+                height: 230px;
+            }
+        }
+
+        .col-md-3{
+            padding: 0;
+        }
+    }
+
+    .title{
+        color: var(--color-webfatorial-detalhes);
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 2.5em;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+    
+    @include breakpoint(medium-only){
+        .title{
+            text-align: left;
+        }
+    }
+}

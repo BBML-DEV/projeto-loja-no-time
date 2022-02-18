@@ -1,0 +1,105 @@
+$layout-name: "l-main";
+
+.#{$layout-name}{
+    padding: 0;
+
+    .carousel-caption{
+        bottom: 4em;
+        padding: 1em;
+        left: 12%;
+        right: 12%;
+        background-color: var(--color-webfatorial-body);
+        border: 1px solid var(--color-webfatorial-detalhes);
+
+        h5{
+            font-size: 1.8em;
+        }
+    }
+
+
+    @include breakpoint(medium-only){
+        .carousel-caption{
+            bottom: 10em;
+
+            h5{
+                font-size: 3em;
+            }
+         }
+
+         #slider .carousel-item,
+         #slider img{
+             height: rem(600);
+             left: 23%;
+             right: 23%;
+         }
+
+    }
+
+    /*MINI BANNER*/
+    #mini-banner{
+        margin-top: -3em;
+        z-index: 10;
+
+
+        #mini-banner3{
+            a{
+                color: gray;  
+            }
+
+            h2{
+                color: gray;
+            }
+        }
+
+        .col-12{
+            z-index: 1;
+            height: 300px;
+            padding: 1.5em;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            h2{
+                text-transform: uppercase;
+                max-width: 50px;
+                font-size: 2.2em;
+                font-weight: 700;
+                line-height: 1em;
+            }
+
+            img{
+                height: 220px;
+                position: absolute;
+                right: 1em;
+                bottom: 1em;
+            }
+
+            a{
+                font-weight: bold;
+                color: var(--color-webfatorial-white);
+                font-size: .8em;
+                text-decoration: none;
+                transition: 0.5s;
+            }
+        }
+    }
+
+    @include breakpoint(medium-only){
+        #mini-banner{
+            .col-12{
+                max-width: 30%;
+                h2{
+                    text-transform: uppercase;
+                    max-width: 50px;
+                    font-size: 1em;
+                    font-weight: 700;
+                    line-height: 1em;
+                }
+            }
+        }
+
+    }
+
+
+}

@@ -1,0 +1,131 @@
+$layout-name: "l-header";
+
+.#{$layout-name}{
+
+    i{
+        color: var(--color-webfatorial-principal);
+    }
+
+    /*navbar*/
+    #navbar .navbar-nav{
+        flex-direction: row;
+        justify-content: end;
+
+        li{
+            margin-left: 1em;
+         }
+    }
+
+    #navbar{
+        .navbar-brand{
+            font-weight: 700;
+            min-width: 100%;
+            text-align: center;
+        }
+
+        @include breakpoint(medium-only){
+            .navbar-brand{
+                min-width: 0;
+                text-align: left;
+            }
+        }
+
+
+        #navbar-items{
+            justify-content: space-between;
+        }
+
+        @include breakpoint(medium-only){
+            #navbar-items{
+                display: flex;
+                min-width: 80%;
+            }
+        }
+
+
+        a{
+            color: var(--color-webfatorial-white);
+        }
+
+   
+        
+        li{
+            position: relative;
+         }
+
+         i{
+             font-size: rem(20);
+         }
+
+
+         span{
+             position: absolute;
+             top: rem(-9);
+             right: rem(-8);
+             width: rem(23);
+             height: rem(23);
+             border-radius: 50%;
+             background-color: red;
+             text-align: center;
+             font-size: 15px;
+         }
+
+         #bag-item span{
+             left: 20px;
+         }
+
+         #search-form{
+             width: 100%;
+             margin: 2em 0;
+             border: rem(2) solid #626262;
+             border-radius: rem(5);
+             padding: rem(5) rem(15);
+
+             i{
+                 color: var(--color-webfatorial-detalhes);
+             }
+             
+             input{
+                 background-color: transparent;
+                 border: none;
+                 color: var(--color-webfatorial-white);
+
+                 &:focus{
+                     box-shadow: none;
+                 }
+                 
+                 &::placeholder{
+                    color: var(--color-webfatorial-white);
+                 }
+             }
+         }
+
+         @include breakpoint(medium-only){
+            #search-form{
+                width: 50%;
+                margin: 0;
+            }
+        }
+    }
+
+
+    //BOTTOM NAV
+    #bottom-nav{
+
+        .container{
+            justify-content: flex-end;
+        }
+
+        background: var(--color-webfatorial-detalhes);
+
+        .nav-link {
+            color: var(--color-webfatorial-white);
+        }
+
+        .navbar-toggle{
+            font-size: 1.5em;
+        }
+
+    
+    }
+}

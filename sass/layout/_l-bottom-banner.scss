@@ -1,0 +1,29 @@
+$layout-name: "l-bottom-banner";
+
+.#{$layout-name}{
+    padding: 6em;
+    margin-bottom: 4em;
+    text-align: center;
+    background-color: #101010;
+
+    p{
+        color: var(--color-webfatorial-detalhes);
+    }
+
+    .btn{
+        margin: 2em;
+        font-weight: bold;
+        padding: 1em;
+    }
+
+    img{
+        max-width: 175px;
+    }
+
+    @include breakpoint(medium-only){
+        h2{
+            font-size: 6em;
+        }
+    }
+    
+}

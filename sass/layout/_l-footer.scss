@@ -1,0 +1,122 @@
+$layout-name:"l-footer";
+
+.#{$layout-name}{
+    border-bottom: 1px solid #626262;
+
+    .footer-column{
+        padding: 2em;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    @include breakpoint(medium-only){
+        .footer-column{
+            padding: 5em 2em;  
+        }
+    }
+
+    .row{
+        h3{
+            margin: 25px;
+            text-transform: uppercase;
+        }
+
+        li{
+            font-size: .8em;
+            text-align: center;
+
+            a{
+                color: #626262;
+                text-decoration: none;
+
+
+                &:hover{
+                    color: #c09578;
+                }
+            }
+        }
+
+        @include breakpoint(medium-only){
+          li{
+              text-align: left;
+          }
+        }
+
+        #footer-center{
+            border-left: 1px solid #626262;
+            border-right: 1px solid #626262;
+
+            h3{
+                font-weight: 900;
+                color: #c09578;
+            }
+
+            .store-phone{
+                color: #626262;
+                font-weight: bold;
+                font-size: 2em;
+                margin-top: -15px;
+            }
+        }
+    }
+
+    #noticias-container{
+        background-color: #101010;
+        border-bottom: 1px solid #626262;
+        text-align: center;
+        padding: 20px;
+    
+        #noticias-form{
+            width: 100%;
+            margin: 2em 0;
+            border: rem(2) solid #626262;
+            border-radius: rem(5);
+            padding: rem(5) rem(15);
+
+            i{
+                color: var(--color-webfatorial-detalhes);
+            }
+            
+            input{
+                background-color: transparent;
+                border: none;
+                color: var(--color-webfatorial-white);
+
+                &:focus{
+                    box-shadow: none;
+                }
+                
+                &::placeholder{
+                   color: var(--color-webfatorial-white);
+                }
+            }
+
+        
+        }
+
+        @include breakpoint(medium-only){
+            #noticias-form{
+                width: 50%;
+                margin: 0 auto;
+            }
+        }
+
+        #social-container{
+            i:hover{
+                color: #c09578;
+            }
+        }
+
+    
+    }
+
+    #copy-container{
+        text-align: center;
+
+        span{
+            color: #c09578;
+        }
+    }
+}
